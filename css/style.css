@@ -13,7 +13,7 @@ header{
     flex-direction: column;
 }
 a:visited{
-    color: #0000ee;
+    color: blue;
 }
 
 .card > header{
@@ -48,12 +48,17 @@ a:visited{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
 }
 
-@keyframes logo-scale {
-    from {width: 25px; opacity: 0;}
-    to {width: 475px; opacity: 1;}
+@keyframes logo{
+    0% {width: 25px; opacity: 0;}
+    100% {width: 475px; opacity: 1;}
   }
+#logo{
+    animation-name: logo;
+    animation-duration: 5s;
+}
 
 
 @media screen and (min-width: 900px){
@@ -94,13 +99,24 @@ a:visited{
         flex-direction: row;
         justify-content: space-around;
       }
-    
-    nav {
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
         width: 100%;
-      }
+        flex-wrap: nowrap;
+    }
+    .card{
+        align-self: end;
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
     #gallery, .gallery {
         display: none;
       }
+    nav{
+        width: 100%;
+    }
     .card li:nth-child(2)::after {
         content: "\1F44D";
       }
