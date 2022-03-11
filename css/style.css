@@ -1,6 +1,6 @@
 body{
-    font-family: 'Poppins', serif;
-    background-image: url('./images/concrete_seamless.png');
+    font-family: Poppins, serif;
+    background-image: url('../images/concrete_seamless.png');
     background-color: #f1f1f1;
 }
 header{
@@ -19,10 +19,8 @@ a:visited{
 .card > header{
     background-color: #288088;
     border: 2px solid #45ADAD;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    padding: 20px 0px;
+    border-radius: 50px 50px 0px 0px;
 }
 
 .pricing{
@@ -30,13 +28,13 @@ a:visited{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
-.card{
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    display: flex;
+.card {
+	flex-basis: 450px;
+	border-radius: 50px 50px 0px 0px;
     flex-direction: column;
-    flex-basis: 450px;
+
 }
 .gallery img{
     border: 10px solid #50C7C7;
@@ -69,17 +67,17 @@ a:visited{
     body > header{
         position: sticky;
         top: 0;
-        right: 0;
-        left: 0;
 
     }
     .nav_links {
         flex-direction: row;
-      }
+        justify-content: flex-end;
+    }
     
-      .card {
+    .card {
         flex-basis: 250px;
-      }
+    }
+    
 
 }
 @media (prefers-reduced-motion: reduce) {
